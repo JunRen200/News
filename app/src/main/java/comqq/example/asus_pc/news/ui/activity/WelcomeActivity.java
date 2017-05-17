@@ -1,4 +1,4 @@
-package comqq.example.asus_pc.news;
+package comqq.example.asus_pc.news.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,9 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.view.WindowManager;
+
+import comqq.example.asus_pc.news.R;
+import comqq.example.asus_pc.news.util.SPUtil;
 
 /**
  * Created by asus-pc on 2017/5/15.

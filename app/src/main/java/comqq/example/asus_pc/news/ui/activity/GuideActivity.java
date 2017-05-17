@@ -1,4 +1,4 @@
-package comqq.example.asus_pc.news;
+package comqq.example.asus_pc.news.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +17,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import comqq.example.asus_pc.news.R;
 
 /**
  * Created by asus-pc on 2017/5/15.
@@ -85,7 +87,7 @@ public class GuideActivity extends AppCompatActivity {
             }
         });
         //为ViewPager添加适配器
-        viewPager.setAdapter(new MyAdapter());
+        viewPager.setAdapter(new MyAdapterGui());
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             //导航页被选择的时候调用
             @Override
@@ -131,7 +133,7 @@ public class GuideActivity extends AppCompatActivity {
     }
 
     //PagerAdapter有四个方法
-    class MyAdapter extends PagerAdapter {
+    class MyAdapterGui extends PagerAdapter {
         //返回导航页的个数
         @Override
         public int getCount() {

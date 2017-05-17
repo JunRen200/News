@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="comqq.example.asus_pc.news.MainActivity">
+    tools:context="comqq.example.asus_pc.news.ui.activity.MainActivity">
 
     <android.support.design.widget.TabLayout
         android:id="@+id/tablayout"
@@ -19,6 +19,7 @@
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </android.support.v4.view.ViewPager>
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
 </LinearLayout>

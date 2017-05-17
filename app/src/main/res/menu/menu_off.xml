@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item_shoucang"
+        android:title="收藏"
+        android:icon="@mipmap/star_off"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/item_txtsize"
+        android:title="正号号字体" />
+    <item
+        app:icon="@mipmap/ic_launcher"
+        android:id="@+id/item_moth"
+        android:title="夜间模式" />
+</menu>

@@ -1,4 +1,4 @@
-package comqq.example.asus_pc.news;
+package comqq.example.asus_pc.news.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
