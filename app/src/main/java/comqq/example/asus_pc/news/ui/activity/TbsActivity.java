@@ -51,11 +51,6 @@ public class TbsActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_off, menu);
-        return true;
-    }
-
-    public boolean onPrepareOptionsMenu(Menu menu) {
         if(state==1) {
             menu.clear();
             getMenuInflater().inflate(R.menu.menu, menu);
@@ -63,6 +58,17 @@ public class TbsActivity extends AppCompatActivity {
             menu.clear();
             getMenuInflater().inflate(R.menu.menu_off,menu);
         }
+        return true;
+    }
+
+    public boolean onPrepareOptionsMenu(Menu menu) {
+//        if(state==1) {
+//            menu.clear();
+//            getMenuInflater().inflate(R.menu.menu, menu);
+//        }else if(state==0){
+//            menu.clear();
+//            getMenuInflater().inflate(R.menu.menu_off,menu);
+//        }
         return true;
     }
 

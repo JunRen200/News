@@ -19,6 +19,12 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         this.list=list;
         this.fragmentList=fragmentLis;
     }
+    public ViewPagerAdapter(FragmentManager fm, List<Fragment> fragmentLis) {
+        super(fm);
+        this.fragmentList=fragmentLis;
+    }
+
+
 
     @Override
     public Fragment getItem(int position) {
@@ -27,12 +33,15 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return list.size();
+        return fragmentList.size();
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return list.get(position);
+        if(list!=null&&list.size()>0) {
+            return list.get(position);
+        }
+        return super.getPageTitle(position);
     }
 
     @Override

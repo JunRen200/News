@@ -24,7 +24,7 @@ public class WelcomeActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_welcome);
         if (SPUtil.getIsFirstRun(this)) {
-            startActivity(new Intent(WelcomeActivity.this, GuideActivity.class));
+        startActivity(new Intent(WelcomeActivity.this, GuideActivity.class));
             SPUtil.setIsFirstRun(this);
             finish();
         } else {

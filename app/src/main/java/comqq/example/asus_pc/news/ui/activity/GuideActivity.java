@@ -62,7 +62,7 @@ public class GuideActivity extends AppCompatActivity {
             imageViews.add(iv);
             //动态加载灰色圆点
             ImageView gray_Iv = new ImageView(this);
-            gray_Iv.setImageResource(R.mipmap.btn_circle_normal);
+            gray_Iv.setImageResource(R.mipmap.circle1);
             LinearLayout.LayoutParams layoutParams =
                     new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
                             LinearLayout.LayoutParams.WRAP_CONTENT);
@@ -74,7 +74,7 @@ public class GuideActivity extends AppCompatActivity {
             ll.addView(gray_Iv);
         }
         red_Iv = new ImageView(this);
-        red_Iv.setImageResource(R.mipmap.btn_circle_selected);
+        red_Iv.setImageResource(R.mipmap.circle);
         rl.addView(red_Iv);
         //任何一个组件都可以得到视图树
         red_Iv.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {

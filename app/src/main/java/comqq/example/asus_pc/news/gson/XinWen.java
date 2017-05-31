@@ -1,4 +1,4 @@
-package comqq.example.asus_pc.news.json;
+package comqq.example.asus_pc.news.gson;
 
 import java.util.List;
 

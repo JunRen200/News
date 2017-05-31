@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs xmlns:app="http://schemas.android.com/apk/res-auto">
+    <tab
+        icon="@mipmap/news"
+        id="@+id/tab_news"
+        title="Favorites"/>
+    <tab
+        icon="@mipmap/weather"
+        id="@+id/tab_weather"
+        title="Nearby"/>
+    <tab
+        icon="@mipmap/me"
+        id="@+id/tab_me"
+        title="Friends"/>
+</tabs>

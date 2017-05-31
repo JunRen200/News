@@ -1,5 +1,6 @@
 package comqq.example.asus_pc.news.ui.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -22,14 +23,16 @@ import java.util.List;
 
 import comqq.example.asus_pc.news.R;
 import comqq.example.asus_pc.news.adapter.Myadapter;
-import comqq.example.asus_pc.news.json.XinWen;
+import comqq.example.asus_pc.news.impl.RecyclerViewItemonclick;
+import comqq.example.asus_pc.news.gson.XinWen;
+import comqq.example.asus_pc.news.ui.activity.TbsActivity;
 import okhttp3.Call;
 
 /**
  * Created by asus-pc on 2017/5/15.
  */
 
-public class FragmentNews extends Fragment {
+public class manyNewsFragment extends Fragment implements RecyclerViewItemonclick {
     private RecyclerView recyclerView;
     private Myadapter myadapter;
     private List<XinWen.ResultBean.DataBean> list;
@@ -40,13 +43,13 @@ public class FragmentNews extends Fragment {
         public void handleMessage(Message msg) {
             if (msg.what == 1) {
                 if (myadapter == null) {
-                    myadapter = new Myadapter(getContext(), list);
+                    myadapter = new Myadapter(getContext(), list,manyNewsFragment.this);
                     recyclerView.setAdapter(myadapter);
                     recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
                     Log.e("AAA","Msg.what=1+"+title);
                 } else {
                     myadapter.setList(list);
-                    myadapter.notifyDataSetChanged();;
+                    myadapter.notifyDataSetChanged();
                     Log.e("AAA","Msg.what=2"+title);
                 }
             }
@@ -119,4 +122,10 @@ public class FragmentNews extends Fragment {
         this.title = title;
     }
 
+    @Override
+    public void onItemClick(View view, int position, String html) {
+        Intent intent=new Intent(getContext(),TbsActivity.class);
+        intent.putExtra("html",html);
+        startActivity(intent);
+    }
 }

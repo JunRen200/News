@@ -15,7 +15,7 @@ import java.util.List;
 
 import comqq.example.asus_pc.news.R;
 import comqq.example.asus_pc.news.impl.RecyclerViewItemonclick;
-import comqq.example.asus_pc.news.json.XinWen;
+import comqq.example.asus_pc.news.gson.XinWen;
 
 /**
  * Created by asus-pc on 2017/5/16.
@@ -26,16 +26,15 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.ViewHolder> {
     private List<XinWen.ResultBean.DataBean> list;
     private RecyclerViewItemonclick recyclerViewItemonclick;
 //private List<String> list;
-    public  Myadapter(Context context, List<XinWen.ResultBean.DataBean> list){
+    public  Myadapter(Context context, List<XinWen.ResultBean.DataBean> list,RecyclerViewItemonclick recyclerViewItemonclick){
         this.context=context;
         this.list=list;
-        this.recyclerViewItemonclick= (RecyclerViewItemonclick) context;
+        this.recyclerViewItemonclick= recyclerViewItemonclick;
     }
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_new, parent, false);
 //        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_new,parent);//错误写法会出现异常
-
         ViewHolder viewHolder=new ViewHolder(view);
         return viewHolder;
     }

@@ -7,6 +7,7 @@
         android:icon="@mipmap/star_on"
         app:showAsAction="ifRoom"/>
     <item
+        android:icon="@mipmap/star_on"
         android:id="@+id/item_txtsize"
         android:title="正号号字体" />
     <item
